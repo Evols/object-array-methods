@@ -3,10 +3,6 @@
 
 This package proposes array methods (map, filter, find, reduce) for objects, in Typescript.
 
-The methods are part of the Object prototype, so you can use `someObject.map((k, v) => v + v)`.
-
-You will need to include `import {} from 'object-array-methods';` to benefit from this library.
-
 ## map
 
 This is equivalent to `Array.map`. It maps a key and value to the new value. The prototype is `map(func: (k: string, v: any, o: Object) => any): Object`.
@@ -14,7 +10,7 @@ This is equivalent to `Array.map`. It maps a key and value to the new value. The
 Usage example:
 
 ```typescript
-import {} from 'object-array-methods';
+import { asMap } from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
 const after = asMap(before).map((k, v) => v + v);
@@ -32,7 +28,7 @@ This is equivalent to `Array.filter`. It filters an object. The prototype is `fi
 Usage example:
 
 ```typescript
-import {} from 'object-array-methods';
+import { asMap } from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
 const after = asMap(before).filter((k, v) => v > 2);
@@ -50,7 +46,7 @@ This is equivalent to `Array.find`. It finds using a predicate in an object, and
 Usage example:
 
 ```typescript
-import {} from 'object-array-methods';
+import { asMap } from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
 const found = asMap(before).find((k, v) => v > 2);
@@ -69,7 +65,7 @@ This is equivalent to `Array.reduce`. It reduces the object into a (generic) val
 Usage example:
 
 ```typescript
-import {} from 'object-array-methods';
+import { asMap } from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
 const result = asMap(before).reduce((acc, k, v) => acc + v, 0);
