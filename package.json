@@ -1,0 +1,19 @@
+{
+  "name": "object-array-methods",
+  "version": "0.0.1",
+  "description": "Array methods (map, filter, find, reduce) for objects",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Evols",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evols/object-array-methods.git"
+  },
+  "keywords": ["array", "object", "map", "filter", "find", "reduce", "utils"]
+}
