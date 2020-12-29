@@ -1,11 +1,8 @@
 {
   "name": "object-array-methods",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Array methods (map, filter, find, reduce) for objects",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "tsc"
-  },
+  "main": "index.js",
   "author": "Evols",
   "license": "ISC",
   "devDependencies": {

@@ -1,4 +1,5 @@
 export {};
+export declare const a = 5;
 declare global {
     interface Object {
         map(func: (k: string, v: any, o: Object) => any): Object;

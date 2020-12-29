@@ -1,6 +1,8 @@
 
 export {};
 
+export const a = 5;
+
 declare global {
   interface Object {
     // Maps an object's values
