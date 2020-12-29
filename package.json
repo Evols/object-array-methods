@@ -4,7 +4,8 @@
   "description": "Array methods (map, filter, find, reduce) for objects",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "cd lib && npm publish"
   },
   "author": "Evols",
   "license": "ISC",

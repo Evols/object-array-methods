@@ -17,7 +17,7 @@ Usage example:
 import {} from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
-const after = before.map((k, v) => v + v);
+const after = asMap(before).map((k, v) => v + v);
 
 console.log(after);
 
@@ -35,7 +35,7 @@ Usage example:
 import {} from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
-const after = before.filter((k, v) => v > 2);
+const after = asMap(before).filter((k, v) => v > 2);
 
 console.log(after);
 
@@ -53,7 +53,7 @@ Usage example:
 import {} from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
-const found = before.find((k, v) => v > 2);
+const found = asMap(before).find((k, v) => v > 2);
 
 console.log(found);
 
@@ -72,7 +72,7 @@ Usage example:
 import {} from 'object-array-methods';
 
 const before = { a: 1, b: 4 };
-const result = before.reduce((acc, k, v) => acc + v, 0);
+const result = asMap(before).reduce((acc, k, v) => acc + v, 0);
 
 console.log(result);
 

@@ -1,11 +1,9 @@
-export {};
-export declare const a = 5;
-declare global {
-    interface Object {
-        map(func: (k: string, v: any, o: Object) => any): Object;
-        filter(func: (k: string, v: any, o: Object) => boolean): Object;
-        find(func: (k: string, v: any, o: Object) => boolean): string | undefined;
-        reduce<T>(func: (acc: T, k: string, v: any, o: Object) => T, initialValue: T): T;
-        [x: string]: any | undefined;
-    }
+export declare class EzMap {
+    [x: string]: any | undefined;
+    constructor(obj: Object);
+    map(func: (k: string, v: any, o: EzMap) => any): EzMap;
+    filter(func: (k: string, v: any, o: EzMap) => boolean): EzMap;
+    find(func: (k: string, v: any, o: EzMap) => boolean): string | undefined;
+    reduce<T>(func: (acc: T, k: string, v: any, o: EzMap) => T, initialValue: T): T;
 }
+export declare function asMap(obj: Object): EzMap;
