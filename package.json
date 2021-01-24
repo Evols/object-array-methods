@@ -16,5 +16,13 @@
     "type": "git",
     "url": "git+https://github.com/Evols/object-array-methods.git"
   },
-  "keywords": ["array", "object", "map", "filter", "find", "reduce", "utils"]
+  "keywords": [
+    "array",
+    "object",
+    "map",
+    "filter",
+    "find",
+    "reduce",
+    "utils"
+  ]
 }
