@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "publish": "cd lib && npm publish"
+    "publish": "tsc && cd lib && npm publish"
   },
   "author": "Evols",
   "license": "ISC",
