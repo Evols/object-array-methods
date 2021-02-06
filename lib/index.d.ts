@@ -6,6 +6,7 @@ export declare class EzMap<T> {
         [k: string]: T;
     });
     map<U>(func: (k: string, v: T, o: EzMap<T>) => U): EzMap<U>;
+    mapToArray<U>(func: (k: string, v: T, o: EzMap<T>) => U): U[];
     filter(func: (k: string, v: T, o: EzMap<T>) => boolean): EzMap<T>;
     find(func: (k: string, v: T, o: EzMap<T>) => boolean): string | undefined;
     reduce<U>(func: (acc: U, k: string, v: T, o: EzMap<T>) => U, initialValue: U): U;

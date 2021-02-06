@@ -9,19 +9,21 @@ export class EzMap<T> {
 
   // Maps an object's values
   map<U>(func: (k: string, v: T, o: EzMap<T>) => U): EzMap<U> {
-    // @ts-ignore
-    return new EzMap<U>(Object.fromEntries(Object.entries(this.obj).map(e => [ e[0], func(e[0], e[1], this) ])));
+    return new EzMap<U>(Object.fromEntries(Object.entries(this.obj).map<[string, U]>(e => [ e[0], func(e[0], e[1], this) ])));
+  }
+
+  // Maps an object's entries to an array
+  mapToArray<U>(func: (k: string, v: T, o: EzMap<T>) => U): U[] {
+    return Object.entries(this.obj).map<U>(e => func(e[0], e[1], this));
   }
 
   // Filters an object's entries
   filter(func: (k: string, v: T, o: EzMap<T>) => boolean): EzMap<T> {
-    // @ts-ignore
-    return new EzMap(Object.fromEntries(Object.entries(this.obj).filter(e => func(e[0], e[1], this) )));
+    return new EzMap<T>(Object.fromEntries(Object.entries(this.obj).filter(e => func(e[0], e[1], this) )));
   }
 
   // Finds a key using a predicate. Returns undefined if not found
   find(func: (k: string, v: T, o: EzMap<T>) => boolean): string | undefined {
-    // @ts-ignore
     return Object.entries(this.obj).find(e => func(e[0], e[1], this) )?.[0];
   }
 

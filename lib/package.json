@@ -1,6 +1,6 @@
 {
   "name": "object-array-methods",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Array methods (map, filter, find, reduce) for objects",
   "main": "index.js",
   "author": "Evols",
